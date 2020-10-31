@@ -14,13 +14,13 @@
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1
 
-```PowerShell
-PS C:\> Show-VSTeam
+```powershell
+Show-VSTeam
 ```
 
-This will open a browser to the TFS or VSTS site
+This will open a browser to the TFS or AzD site
 
 ## PARAMETERS
 
@@ -30,6 +30,8 @@ This will open a browser to the TFS or VSTS site
 
 ## NOTES
 
+<!-- #include "./common/prerequisites.md" -->
+
 ## RELATED LINKS
 
-[Add-VSTeamAccount](Add-VSTeamAccount.md)
+<!-- #include "./common/related.md" -->

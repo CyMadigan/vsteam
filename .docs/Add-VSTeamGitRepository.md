@@ -10,23 +10,21 @@
 
 ## DESCRIPTION
 
-Add-VSTeamGitRepository adds a Git repository to your Visual Studio Team Services or Team Foundation Server account.
+Add-VSTeamGitRepository adds a Git repository to your Azure DevOps or Team Foundation Server account.
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1
 
-```PowerShell
-PS C:\> Add-VSTeamGitRepository -ProjectName Demo -Name Temp
+```powershell
+Add-VSTeamGitRepository -ProjectName Demo -Name Temp
 ```
 
 This command adds a new repository named Temp to the Demo project.
 
 ## PARAMETERS
 
-<!-- #include "./params/projectName.md" -->
-
-### -Name
+### Name
 
 Specifies the name of the repository.
 
@@ -36,10 +34,16 @@ Aliases: RepositoryID
 Accept pipeline input: true (ByPropertyName)
 ```
 
+<!-- #include "./params/projectName.md" -->
+
 ## INPUTS
 
 ## OUTPUTS
 
 ## NOTES
 
+<!-- #include "./common/prerequisites.md" -->
+
 ## RELATED LINKS
+
+<!-- #include "./common/related.md" -->

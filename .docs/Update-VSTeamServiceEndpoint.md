@@ -16,18 +16,16 @@
 
 ## PARAMETERS
 
-<!-- #include "./params/projectName.md" -->
+### Id
 
-### -Id
-
-UUID of existing services endpoint from VSTS
+UUID of existing services endpoint from AzD
 
 ```yaml
 Type: String
 Position: 1
 ```
 
-### -Object
+### Object
 
 Hashtable of payload for REST call
 
@@ -37,17 +35,23 @@ Required: true
 Accept pipeline input: true (ByPropertyName)
 ```
 
-<!-- #include "./params/force.md" -->
+<!-- #include "./params/projectName.md" -->
+
+<!-- #include "./params/forcegroup.md" -->
 
 ## INPUTS
 
 ## OUTPUTS
 
-### Team.ServiceEndpoint
+### vsteam_lib.ServiceEndpoint
 
 ## NOTES
 
+<!-- #include "./common/prerequisites.md" -->
+
 ## RELATED LINKS
+
+<!-- #include "./common/related.md" -->
 
 [Add-VSTeamServiceEndpoint](Add-VSTeamServiceEndpoint.md)
 

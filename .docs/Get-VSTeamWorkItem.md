@@ -14,32 +14,19 @@
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1
 
-```PowerShell
-PS C:\> Get-VSTeamWorkItem -ProjectName demo -Ids 47,48
+```powershell
+Get-VSTeamWorkItem -Id 47,48
 ```
 
-This command gets work items with IDs 47 and 48 by using the ID parameter.
+This command gets work items with IDs 47 and 48 by using the IDs parameter.
 
 ## PARAMETERS
 
-<!-- #include "./params/projectName.md" -->
+### Id
 
-### -Id
-
-The id of the work item.
-
-```yaml
-Type: Int32
-Parameter Sets: ByID
-Required: True
-Accept pipeline input: true (ByPropertyName, ByValue)
-```
-
-### -Ids
-
-The id of the work item.
+The id of one or more work items.
 
 ```yaml
 Type: Int32[]
@@ -48,7 +35,7 @@ Required: True
 Accept pipeline input: true (ByPropertyName, ByValue)
 ```
 
-### -ErrorPolicy
+### ErrorPolicy
 
 The flag to control error policy in a bulk get work items request.  The acceptable values for this parameter are:
 
@@ -59,10 +46,10 @@ The flag to control error policy in a bulk get work items request.  The acceptab
 Type: String
 Parameter Sets: List
 Required: True
-Default value: Fail
+Default value: omit
 ```
 
-### -Fields
+### Fields
 
 Comma-separated list of requested fields.
 
@@ -70,7 +57,7 @@ Comma-separated list of requested fields.
 Type: String[]
 ```
 
-### -Expand
+### Expand
 
 Comma-separated list of requested fields.  The acceptable values for this parameter are:
 
@@ -82,12 +69,6 @@ Comma-separated list of requested fields.  The acceptable values for this parame
 
 ```yaml
 Type: String
-```
-
-### -AsOf
-
-```yaml
-Type: DateTime
 ```
 
 ## INPUTS
@@ -104,6 +85,10 @@ WorkItemType
 
 WorkItemType is a dynamic parameter and use the default project value to query their validate set.
 
-If you do not set the default project by called Set-VSTeamDefaultProject before calling Get-VSTeamWorkItem you will have to type in the names.
+If you do not set the default project by called Set-VSTeamDefaultProject you must provide -ProjectName or you will have to type in the names.
+
+<!-- #include "./common/prerequisites.md" -->
 
 ## RELATED LINKS
+
+<!-- #include "./common/related.md" -->

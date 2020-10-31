@@ -12,7 +12,7 @@
 
 <!-- #include "./synopsis/Get-VSTeamOption.md" -->
 
-There are two table formats defined for the Team.Option type, Default and Versions.
+There are two table formats defined for the vsteam_lib.Option type, Default and Versions.
 
 Default view contains Name, Area, Max Version and URI Template.
 
@@ -20,30 +20,79 @@ Version view contains Name, Area, Min Version, Max Version, Released Version and
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1
 
-```PowerShell
-PS C:\> Get-VSTeamOption
+```powershell
+Get-VSTeamOption
 ```
 
 This will display all the versions of supported APIs for your account using the 'Default' table format.
 
-### -------------------------- EXAMPLE 2 --------------------------
+### Example 2
 
-```PowerShell
-PS C:\> Get-VSTeamOption | Format-Table -View Versions
+```powershell
+Get-VSTeamOption | Format-Table -View Versions
 ```
 
 This will display all the versions of supported APIs for your account using the 'Versions' custom table format.
 
+### Example 3
+
+```powershell
+Get-VSTeamOption -SubDomain vsrm
+```
+
+This will display all the versions of supported APIs for the release management service.
+
+### Example 4
+
+```powershell
+Get-VSTeamOption -Area core
+```
+
+This will display all the versions of supported APIs for the area core.
+
+### Example 5
+
+```powershell
+Get-VSTeamOption -Area core -Resource teams
+```
+
+This will display all the versions of supported APIs for resources teams under the area core.
+
 ## PARAMETERS
 
-### -Release
+### SubDomain
 
-Returns options for Release Management APIs
+Returns options for that sub domain APIs. Some examples include:
+
+- vsaex = Member Entitlement Management
+- feeds = Artifacts
+- vsrm = Release Management
+- vssps = Graph
+- extmgmt = Extensions
 
 ```yaml
-Type: SwitchParameter
+Type: String
+Required: false
+```
+
+### Area
+
+Returns options for that area's APIs.
+
+```yaml
+Type: String
+Required: false
+```
+
+### Resource
+
+Returns options for that resource's APIs.
+
+```yaml
+Type: String
+Required: false
 ```
 
 ## INPUTS
@@ -52,6 +101,8 @@ Type: SwitchParameter
 
 ## NOTES
 
+<!-- #include "./common/prerequisites.md" -->
+
 ## RELATED LINKS
 
-[Add-VSTeamAccount](Add-VSTeamAccount.md)
+<!-- #include "./common/related.md" -->
